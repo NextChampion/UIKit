@@ -7,16 +7,10 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, View, StatusBar} from 'react-native';
 
-import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
-import Button from './compoments/Button';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Button} from './compoments';
 
 export interface Props {
   name: string;
@@ -28,14 +22,9 @@ const App: React.FC<Props> = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          <View style={styles.body}>
-            <Button title="按钮" />
-          </View>
-        </ScrollView>
+        <View style={styles.body}>
+          <Button title="按钮" type="danger" />
+        </View>
       </SafeAreaView>
     </>
   );
