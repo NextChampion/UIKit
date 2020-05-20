@@ -1,18 +1,23 @@
-import React, {Component} from 'react';
+import React, {memo} from 'react';
 import {Text, View} from 'react-native';
+import {BtnProps} from './style';
 
-export interface Props {
-  title: string;
-  onClick?: () => void;
+function Button(props: BtnProps) {
+  const {title} = props;
+  return (
+    <View>
+      <Text> {title} </Text>
+    </View>
+  );
 }
 
-export default class Button extends Component<Props> {
-  render() {
-    const {title} = this.props;
-    return (
-      <View>
-        <Text> {title} </Text>
-      </View>
-    );
-  }
-}
+Button.defaultProps = {
+  title: '',
+  disabled: false,
+  onClick: null,
+  type: 'normal',
+  block: false,
+  shape: 'normal',
+  size: 'normal',
+};
+export default memo(Button);
