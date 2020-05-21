@@ -6,7 +6,7 @@
  * @LastEditors: zhangcunxia
  * @Description:
  */
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import {
   FlatList,
   StyleSheet,
@@ -16,9 +16,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {ComponentList, ListItem} from '../compoments';
-import {Color} from 'Theme';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { ComponentList, ListItem } from '../compoments';
+import { Color } from 'Theme';
 
 export interface Props {
   name: string;
@@ -26,12 +26,12 @@ export interface Props {
   navigation: any;
 }
 const HomeScreen: React.FC<Props> = (props: Props) => {
-  const {navigation} = props;
+  const { navigation } = props;
   function onClick(title: string) {
-    navigation.navigate(title, {title});
+    navigation.navigate(title, { title });
   }
 
-  function renderItem({item}: {item: ListItem}) {
+  function renderItem({ item }: { item: ListItem }) {
     return (
       <TouchableOpacity
         style={styles.listItem}

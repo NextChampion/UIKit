@@ -23,4 +23,4 @@ const ComponentList: ListItem[] = [
     key: '2',
   },
 ];
-export {Button, ComponentList};
+export { Button, ComponentList };

@@ -7,7 +7,7 @@
  * @Description:
  */
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from 'screens/HomeScreen';
 import ComponentScreen from 'screens/ComponentScreen';
 import ButtonScreen from 'screens/ButtonScreen';

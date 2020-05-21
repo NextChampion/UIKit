@@ -19,4 +19,4 @@ const margin = {
   small: 6,
 };
 
-export {padding, margin};
+export { padding, margin };

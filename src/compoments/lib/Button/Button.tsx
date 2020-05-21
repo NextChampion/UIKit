@@ -1,4 +1,4 @@
-import React, {memo, ReactNode} from 'react';
+import React, { memo, ReactNode } from 'react';
 import {
   Text,
   StyleSheet,
@@ -7,7 +7,7 @@ import {
   ViewProps,
   TextStyle,
 } from 'react-native';
-import {Color} from 'Theme';
+import { Color } from 'Theme';
 
 export interface BtnProps extends ViewProps {
   title?: string;

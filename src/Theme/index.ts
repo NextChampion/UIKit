@@ -10,4 +10,4 @@ import Color from './Color';
 import * as Font from './Font';
 import * as Size from './Size';
 
-export {Color, Font, Size};
+export { Color, Font, Size };

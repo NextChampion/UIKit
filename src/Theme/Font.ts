@@ -34,4 +34,4 @@ const header = {
   h6: fontSize.small,
 };
 
-export {fontSize, fontWeight, lineHeight, header};
+export { fontSize, fontWeight, lineHeight, header };

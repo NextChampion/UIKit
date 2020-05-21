@@ -7,8 +7,8 @@
  * @Description:
  */
 
-import React, {memo} from 'react';
-import {View, Text} from 'react-native';
+import React, { memo } from 'react';
+import { View, Text } from 'react-native';
 
 const ButtonScreen = () => {
   return (
