@@ -42,16 +42,17 @@ function Button(props: BtnProps) {
     block && styles.block,
     style,
   ]);
+
+  const innerTitleStyle = StyleSheet.flatten([
+    styles[`${type}Title`] || styles.title,
+    titleStyle,
+  ]);
   return (
     <TouchableOpacity
       disabled={disabled}
       style={containetStyle}
       onPress={onPress}>
-      {children || (
-        <Text style={StyleSheet.flatten([styles.title, titleStyle])}>
-          {title || '按钮'}
-        </Text>
-      )}
+      {children || <Text style={innerTitleStyle}>{title || '按钮'}</Text>}
     </TouchableOpacity>
   );
 }
@@ -107,9 +108,9 @@ const styles = StyleSheet.create<ButtonStyles>({
     backgroundColor: Color.danger,
   },
   ghostType: {
-    backgroundColor: 'white',
+    backgroundColor: Color.white,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: 'green',
+    borderColor: Color.primary,
   },
   normalShape: {
     borderRadius: 5,
@@ -124,5 +125,15 @@ const styles = StyleSheet.create<ButtonStyles>({
     alignSelf: 'center',
     alignContent: 'center',
     color: Color.white,
+  },
+  primaryTitle: {
+    alignSelf: 'center',
+    alignContent: 'center',
+    color: Color.white,
+  },
+  ghostTitle: {
+    alignSelf: 'center',
+    alignContent: 'center',
+    color: Color.primary,
   },
 });
