@@ -35,19 +35,23 @@ function Button(props: BtnProps) {
     onPress,
     children,
   } = props;
-  const containetStyle = [
+  const containetStyle = StyleSheet.flatten([
     styles[`${type}Type`],
     styles[`${size}Size`],
     styles[`${shape}Shape`],
     block && styles.block,
     style,
-  ];
+  ]);
   return (
     <TouchableOpacity
       disabled={disabled}
       style={containetStyle}
       onPress={onPress}>
-      {children || <Text style={[styles.title, titleStyle]}> {title} </Text>}
+      {children || (
+        <Text style={StyleSheet.flatten([styles.title, titleStyle])}>
+          {title || '按钮'}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 }
